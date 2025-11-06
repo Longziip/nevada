@@ -97,7 +97,7 @@ const BinaryMessage = () => {
           )}
         </motion.div>
         <div className="binary-label">
-          {showOriginal ? '✨ Original Message 🧸' : '💻 Binary Heart 💻'}
+          {showOriginal ? '' : ''}
         </div>
       </div>
     </motion.div>

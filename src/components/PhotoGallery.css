@@ -51,7 +51,7 @@
 .gallery-header {
   padding: 20px;
   text-align: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
   color: white;
 }
 
@@ -93,7 +93,7 @@
   cursor: pointer;
   z-index: 100;
   font-size: 1.5rem;
-  color: #764ba2;
+  color: #ff1493;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
@@ -130,7 +130,7 @@
 }
 
 .indicator.active {
-  background: #764ba2;
+  background: #ff1493;
   transform: scale(1.3);
 }
 

@@ -1,6 +1,6 @@
 .App {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 15%, #4facfe 30%, #00d4ff 45%, #00f2fe 60%, #4facfe 75%, #764ba2 90%, #667eea 100%);
+  background: linear-gradient(135deg, #ff69b4 0%, #ff1493 15%, #ffb6c1 30%, #ffc0cb 45%, #ff69b4 60%, #ff1493 75%, #ffb6c1 90%, #ffc0cb 100%);
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
   position: relative;
@@ -98,7 +98,7 @@
   border-radius: 50px;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #764ba2;
+  color: #ff1493;
   cursor: pointer;
   display: flex;
   align-items: center;

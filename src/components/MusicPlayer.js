@@ -1,48 +1,67 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaTimes, FaPlay, FaPause, FaVolumeUp, FaVolumeMute } from 'react-icons/fa';
+import { FaTimes } from 'react-icons/fa';
 import './MusicPlayer.css';
 
 const MusicPlayer = ({ onClose }) => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
-  const [volume, setVolume] = useState(0.5);
-  const audioRef = useRef(null);
+  const [playerReady, setPlayerReady] = useState(false);
+  const playerRef = useRef(null);
 
-  // Make You Mine by Madison Beer
-  const musicUrl = 'https://www.youtube.com/watch?v=1aA1Z2rIjYM'; // Make You Mine - Madison Beer
+  // Make You Mine by Madison Beer - Extract video ID
+  const videoId = '1aA1Z2rIjYM';
 
   useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.volume = volume;
-    }
-  }, [volume]);
+    // Load YouTube IFrame API
+    if (!window.YT) {
+      const tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      const firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-  const togglePlay = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play();
+      window.onYouTubeIframeAPIReady = () => {
+        playerRef.current = new window.YT.Player('youtube-player', {
+          videoId: videoId,
+          playerVars: {
+            autoplay: 0,
+            controls: 1,
+            loop: 1,
+            modestbranding: 1,
+            rel: 0,
+            playlist: videoId, // Required for loop to work
+          },
+          events: {
+            onReady: () => {
+              setPlayerReady(true);
+            },
+          },
+        });
+      };
+    } else if (window.YT && window.YT.Player) {
+      // API already loaded
+      playerRef.current = new window.YT.Player('youtube-player', {
+        videoId: videoId,
+        playerVars: {
+          autoplay: 0,
+          controls: 1,
+          loop: 1,
+          modestbranding: 1,
+          rel: 0,
+          playlist: videoId,
+        },
+        events: {
+          onReady: () => {
+            setPlayerReady(true);
+          },
+        },
+      });
+    }
+
+    return () => {
+      if (playerRef.current && playerRef.current.destroy) {
+        playerRef.current.destroy();
       }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
-  const toggleMute = () => {
-    if (audioRef.current) {
-      audioRef.current.muted = !isMuted;
-      setIsMuted(!isMuted);
-    }
-  };
-
-  const handleVolumeChange = (e) => {
-    const newVolume = parseFloat(e.target.value);
-    setVolume(newVolume);
-    if (audioRef.current) {
-      audioRef.current.volume = newVolume;
-    }
-  };
+    };
+  }, [videoId]);
 
   return (
     <motion.div
@@ -68,48 +87,16 @@ const MusicPlayer = ({ onClose }) => {
         </div>
 
         <div className="music-content">
-          <div className="music-visualizer">
-            <div className="visualizer-bar" style={{ animationDelay: '0s' }} />
-            <div className="visualizer-bar" style={{ animationDelay: '0.1s' }} />
-            <div className="visualizer-bar" style={{ animationDelay: '0.2s' }} />
-            <div className="visualizer-bar" style={{ animationDelay: '0.3s' }} />
-            <div className="visualizer-bar" style={{ animationDelay: '0.4s' }} />
-            <div className="visualizer-bar" style={{ animationDelay: '0.5s' }} />
-            <div className="visualizer-bar" style={{ animationDelay: '0.6s' }} />
-            <div className="visualizer-bar" style={{ animationDelay: '0.7s' }} />
+          <div className="youtube-container">
+            <div id="youtube-player" className="youtube-player"></div>
           </div>
-
-          <div className="music-controls">
-            <button className="play-btn" onClick={togglePlay}>
-              {isPlaying ? <FaPause /> : <FaPlay />}
-            </button>
-          </div>
-
-          <div className="volume-control">
-            <button className="mute-btn" onClick={toggleMute}>
-              {isMuted ? <FaVolumeMute /> : <FaVolumeUp />}
-            </button>
-            <input
-              type="range"
-              min="0"
-              max="1"
-              step="0.01"
-              value={volume}
-              onChange={handleVolumeChange}
-              className="volume-slider"
-            />
-          </div>
-
-          <audio
-            ref={audioRef}
-            src={musicUrl}
-            loop
-            onEnded={() => setIsPlaying(false)}
-          />
 
           <p className="music-note">
             🎵 Make You Mine - Madison Beer 🎵
           </p>
+          {!playerReady && (
+            <p className="loading-text">Loading player...</p>
+          )}
         </div>
       </motion.div>
     </motion.div>

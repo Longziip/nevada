@@ -97,7 +97,7 @@ function App() {
           },
           particles: {
             color: {
-              value: ['#FF69B4', '#FFB6C1', '#FFC0CB', '#FF1493', '#4facfe', '#00d4ff', '#00f2fe', '#5dade2'],
+              value: ['#FF69B4', '#FFB6C1', '#FFC0CB', '#FF1493', '#FF91A4', '#FFB6C1', '#FF69B4', '#FF1493'],
             },
             links: {
               color: '#FFB6C1',
