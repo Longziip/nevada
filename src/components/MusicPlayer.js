@@ -1,67 +1,15 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { FaTimes } from 'react-icons/fa';
 import './MusicPlayer.css';
 
 const MusicPlayer = ({ onClose }) => {
-  const [playerReady, setPlayerReady] = useState(false);
-  const playerRef = useRef(null);
-
-  // Make You Mine by Madison Beer - Extract video ID
-  const videoId = '1aA1Z2rIjYM';
-
-  useEffect(() => {
-    // Load YouTube IFrame API
-    if (!window.YT) {
-      const tag = document.createElement('script');
-      tag.src = 'https://www.youtube.com/iframe_api';
-      const firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-      window.onYouTubeIframeAPIReady = () => {
-        playerRef.current = new window.YT.Player('youtube-player', {
-          videoId: videoId,
-          playerVars: {
-            autoplay: 0,
-            controls: 1,
-            loop: 1,
-            modestbranding: 1,
-            rel: 0,
-            playlist: videoId, // Required for loop to work
-          },
-          events: {
-            onReady: () => {
-              setPlayerReady(true);
-            },
-          },
-        });
-      };
-    } else if (window.YT && window.YT.Player) {
-      // API already loaded
-      playerRef.current = new window.YT.Player('youtube-player', {
-        videoId: videoId,
-        playerVars: {
-          autoplay: 0,
-          controls: 1,
-          loop: 1,
-          modestbranding: 1,
-          rel: 0,
-          playlist: videoId,
-        },
-        events: {
-          onReady: () => {
-            setPlayerReady(true);
-          },
-        },
-      });
-    }
-
-    return () => {
-      if (playerRef.current && playerRef.current.destroy) {
-        playerRef.current.destroy();
-      }
-    };
-  }, [videoId]);
+  // Make You Mine by Madison Beer
+  const videoId = '_-v31Yc7RRY';
+  
+  // YouTube embed URL with autoplay, loop, and controls
+  // Using enablejsapi=1 for better compatibility
+  const embedUrl = `https://www.youtube.com/embed/${videoId}?enablejsapi=1&autoplay=0&loop=1&playlist=${videoId}&controls=1&modestbranding=1&rel=0&origin=${window.location.origin}`;
 
   return (
     <motion.div
@@ -88,15 +36,19 @@ const MusicPlayer = ({ onClose }) => {
 
         <div className="music-content">
           <div className="youtube-container">
-            <div id="youtube-player" className="youtube-player"></div>
+            <iframe
+              src={embedUrl}
+              title="Make You Mine - Madison Beer"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="youtube-player"
+            ></iframe>
           </div>
 
           <p className="music-note">
             🎵 Make You Mine - Madison Beer 🎵
           </p>
-          {!playerReady && (
-            <p className="loading-text">Loading player...</p>
-          )}
         </div>
       </motion.div>
     </motion.div>

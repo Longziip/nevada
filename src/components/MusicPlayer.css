@@ -225,6 +225,29 @@
   margin-top: 10px;
 }
 
+.youtube-link {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.youtube-link-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+}
+
+.youtube-link-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 20, 147, 0.5);
+}
+
 @media (max-width: 768px) {
   .music-modal {
     max-width: 90%;

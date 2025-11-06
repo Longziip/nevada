@@ -3,9 +3,7 @@ import { motion } from 'framer-motion';
 import './BinaryMessage.css';
 
 const BinaryMessage = () => {
-  const [binaryText, setBinaryText] = useState('');
   const [heartAscii, setHeartAscii] = useState('');
-  const [showOriginal, setShowOriginal] = useState(false);
 
   const message = 'Happy Birthday Kamilia';
   
@@ -18,7 +16,6 @@ const BinaryMessage = () => {
     };
 
     const binary = convertToBinary(message);
-    setBinaryText(binary);
 
     // Create ASCII heart shape with binary
     const createHeartAscii = (binaryStr) => {
@@ -65,13 +62,6 @@ const BinaryMessage = () => {
     };
 
     setHeartAscii(createHeartAscii(binary));
-
-    // Toggle between binary and original every 3 seconds
-    const interval = setInterval(() => {
-      setShowOriginal(prev => !prev);
-    }, 3000);
-
-    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -83,21 +73,14 @@ const BinaryMessage = () => {
     >
       <div className="binary-box">
         <motion.div
-          key={showOriginal ? 'original' : 'binary'}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
           className="binary-text"
         >
-          {showOriginal ? (
-            <span className="original-message">{message} 🧸</span>
-          ) : (
-            <pre className="binary-heart">{heartAscii}</pre>
-          )}
+          <pre className="binary-heart">{heartAscii}</pre>
         </motion.div>
         <div className="binary-label">
-          {showOriginal ? '' : ''}
         </div>
       </div>
     </motion.div>
