@@ -1,0 +1,246 @@
+.special-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.special-modal {
+  background: white;
+  border-radius: 20px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: rotate(90deg);
+}
+
+.special-content {
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.cake-container {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cake {
+  position: relative;
+  cursor: pointer;
+}
+
+.cake-layer {
+  width: 120px;
+  height: 40px;
+  background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+  border-radius: 10px;
+  margin: 0 auto;
+  box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+}
+
+.cake-layer.top {
+  width: 100px;
+  height: 35px;
+  background: linear-gradient(135deg, #ffb6c1 0%, #ff69b4 100%);
+}
+
+.cake-layer.middle {
+  width: 110px;
+  height: 38px;
+  background: linear-gradient(135deg, #ff91a4 0%, #ff1493 100%);
+}
+
+.cake-layer.bottom {
+  width: 120px;
+  height: 40px;
+}
+
+.candle {
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 50px;
+  background: linear-gradient(180deg, #fff 0%, #ffd700 100%);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.flame {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 20px;
+  background: linear-gradient(180deg, #ffd700 0%, #ff6347 100%);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: flicker 0.5s ease-in-out infinite alternate;
+}
+
+.flame.blown {
+  animation: none;
+  opacity: 0;
+  transform: translateX(-50%) scale(0);
+  transition: all 0.3s ease;
+}
+
+@keyframes flicker {
+  0% {
+    transform: translateX(-50%) scale(1) rotate(-2deg);
+  }
+  100% {
+    transform: translateX(-50%) scale(1.1) rotate(2deg);
+  }
+}
+
+.birthday-wish {
+  margin: 30px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #fff5f5 0%, #ffeef0 100%);
+  border-radius: 15px;
+  border: 2px solid #ffb6c1;
+}
+
+.birthday-wish h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: #ff1493;
+  margin-bottom: 15px;
+}
+
+.wish-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.confetti-effect {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 2rem;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.confetti-effect span {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.special-message {
+  margin-top: 30px;
+  padding: 25px;
+  background: rgba(255, 182, 193, 0.1);
+  border-radius: 15px;
+}
+
+.special-message h3 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+  color: #ff1493;
+  margin-bottom: 15px;
+}
+
+.special-message p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.hearts {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  color: #ff69b4;
+  font-size: 1.5rem;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@media (max-width: 768px) {
+  .special-modal {
+    max-width: 90%;
+  }
+
+  .cake-layer {
+    width: 100px;
+    height: 35px;
+  }
+
+  .cake-layer.top {
+    width: 80px;
+    height: 30px;
+  }
+
+  .cake-layer.middle {
+    width: 90px;
+    height: 33px;
+  }
+}
+

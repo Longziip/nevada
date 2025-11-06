@@ -3,13 +3,16 @@ import Confetti from 'react-confetti';
 import Particles from 'react-particles';
 import { loadSlim } from 'tsparticles-slim';
 import { motion } from 'framer-motion';
-import { FaHeart, FaMusic, FaImage, FaGift } from 'react-icons/fa';
+import { FaHeart, FaMusic, FaImage, FaGift, FaLeaf } from 'react-icons/fa';
 import FlowerGenerator from './components/FlowerGenerator';
 import BinaryMessage from './components/BinaryMessage';
 import TypedMessage from './components/TypedMessage';
 import PhotoGallery from './components/PhotoGallery';
 import MusicPlayer from './components/MusicPlayer';
 import EnvelopeLetter from './components/EnvelopeLetter';
+import ReasonsILoveYou from './components/ReasonsILoveYou';
+import SpecialMessage from './components/SpecialMessage';
+import FlowerGallery from './components/FlowerGallery';
 import './App.css';
 
 function App() {
@@ -20,6 +23,8 @@ function App() {
   });
   const [showGallery, setShowGallery] = useState(false);
   const [showMusic, setShowMusic] = useState(false);
+  const [showSpecial, setShowSpecial] = useState(false);
+  const [showFlowerGallery, setShowFlowerGallery] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -172,6 +177,8 @@ function App() {
 
         <EnvelopeLetter />
 
+        <ReasonsILoveYou />
+
         <div className="feature-buttons">
           <motion.button
             whileHover={{ scale: 1.1 }}
@@ -192,14 +199,25 @@ function App() {
           <motion.button
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
+            onClick={() => setShowSpecial(!showSpecial)}
             className="feature-btn"
           >
             <FaGift /> Special Message
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => setShowFlowerGallery(!showFlowerGallery)}
+            className="feature-btn"
+          >
+            <FaLeaf /> Flower Bouquets
           </motion.button>
         </div>
 
         {showGallery && <PhotoGallery onClose={() => setShowGallery(false)} />}
         {showMusic && <MusicPlayer onClose={() => setShowMusic(false)} />}
+        {showSpecial && <SpecialMessage onClose={() => setShowSpecial(false)} />}
+        {showFlowerGallery && <FlowerGallery onClose={() => setShowFlowerGallery(false)} />}
 
         <motion.div
           initial={{ opacity: 0 }}

@@ -8,12 +8,15 @@ const PhotoGallery = ({ onClose }) => {
 
   // Placeholder images - replace with actual photos
   const photos = [
-    { id: 1, url: 'https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=800', alt: 'Beautiful moment 1' },
-    { id: 2, url: 'https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800', alt: 'Beautiful moment 2' },
-    { id: 3, url: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800', alt: 'Beautiful moment 3' },
-    { id: 4, url: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800', alt: 'Beautiful moment 4' },
-    { id: 5, url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800', alt: 'Beautiful moment 5' },
-    { id: 6, url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800', alt: 'Beautiful moment 6' },
+    { id: 1, url: 'https://media.discordapp.net/attachments/1418460823151443988/1431044367631646880/image.png?ex=690d1eec&is=690bcd6c&hm=78361d9aac67eb49851e9945f89c9ece71d4a1208fdab8bd6d2dcbe45352f24d&=&format=webp&quality=lossless&width=1042&height=606', alt: 'Beautiful moment 1' },
+    { id: 2, url: 'https://media.discordapp.net/attachments/1418460823151443988/1429900348952281088/image.png?ex=690ce9f9&is=690b9879&hm=56e30bf21a9c320ab62fe1f73d5a2561f269ed482f72774a7165aba4e066bad6&=&format=webp&quality=lossless&width=757&height=710', alt: 'Beautiful moment 2' },
+    { id: 3, url: 'https://media.discordapp.net/attachments/1418460823151443988/1429893428711526540/image.png?ex=690ce387&is=690b9207&hm=7e75e9298ecd70f9b4dcf5ba948f6d42d620fb1431e5de004ec99b6e1c804bbd&=&format=webp&quality=lossless&width=977&height=606', alt: 'Beautiful moment 3' },
+    { id: 4, url: 'https://media.discordapp.net/attachments/1418460823151443988/1427744899767472148/image.png?ex=690cfb8e&is=690baa0e&hm=6b85ac71573f82f5f7b7444b4cee769acb93859af11277b9684e7f4f24c8174d&=&format=webp&quality=lossless&width=1286&height=606', alt: 'Beautiful moment 4' },
+    { id: 5, url: 'https://media.discordapp.net/attachments/1418460823151443988/1427448525377110107/image.png?ex=690d3909&is=690be789&hm=8480b0135d358335f1fb4c00010f023de50e864b87fd64e61a9920122802f338&=&format=webp&quality=lossless&width=1384&height=597', alt: 'Beautiful moment 5' },
+    { id: 6, url: 'https://media.discordapp.net/attachments/1418460823151443988/1424538607766470778/image.png?ex=690d2ef6&is=690bdd76&hm=a03a543b17b0cee35c597492c553531ad93fb84651ef009bcc44b9cbaae46e61&=&format=webp&quality=lossless&width=1024&height=606', alt: 'Beautiful moment 6' },
+    { id: 7, url: 'https://media.discordapp.net/attachments/1418460823151443988/1424110728033599660/image.png?ex=690cf1f8&is=690ba078&hm=48950cb1c2ca5b61814d36e736200957999b2a1b1480622b735081ff40e9f86d&=&format=webp&quality=lossless&width=1155&height=606', alt: 'Beautiful moment 7' },
+    { id: 8, url: 'https://media.discordapp.net/attachments/1418460823151443988/1423345964390809631/image.png?ex=690d757a&is=690c23fa&hm=181efd7c814dc9ae5d822971a25b3e68ea4279b12fc0aea09eaa2b014347fc7b&=&format=webp&quality=lossless', alt: 'Beautiful moment 8' },
+    { id: 9, url: 'https://media.discordapp.net/attachments/1418460823151443988/1422392593534291998/image.png?ex=690d4955&is=690bf7d5&hm=811eaa3c55ef61b07bc33d16408101cac0217e73e2d226776bb205a2e23e8c55&=&format=webp&quality=lossless&width=869&height=606', alt: 'Beautiful moment 9' },
   ];
 
   const nextPhoto = () => {
