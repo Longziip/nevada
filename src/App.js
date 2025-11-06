@@ -207,7 +207,7 @@ function App() {
           transition={{ delay: 2, duration: 1 }}
           className="footer"
         >
-          <p>Made with <FaHeart className="heart-inline" /> 🧸 for you 🧸 by Zipry</p>
+          <p>Made with <FaHeart className="heart-inline" /> for Kami by Zipry</p>
         </motion.div>
       </div>
     </div>
