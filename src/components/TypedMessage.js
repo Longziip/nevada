@@ -4,7 +4,7 @@ import './TypedMessage.css';
 
 const messages = [
   'Your ocean eyes captivate me every day! ',
-  'You\'re as amazing like Alya and Marin! ✨ ',
+  'You\'re as amazing like Alya! ✨ ',
   'Riding with you is gonna bethe best adventure! 🏍️ ',
   'I love you more than words can say! 💖',
   'Wishing you the happiest birthday ever! 🎉 ',

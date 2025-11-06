@@ -10,63 +10,39 @@ const FlowerGallery = ({ onClose }) => {
   const bouquets = [
     { 
       id: 1, 
-      url: 'https://images.unsplash.com/photo-1462275646964-a0e3386b89fa?w=1200&q=90', 
+      url: 'https://tse2.mm.bing.net/th/id/OIP.E_H19UmDuVpxrS8_6Uzd4wAAAA?rs=1&pid=ImgDetMain&o=7&rm=3', 
       alt: 'Beautiful Pink Roses Bouquet',
       name: 'Pink Roses Bouquet 💐'
     },
     { 
       id: 2, 
-      url: 'https://images.unsplash.com/photo-1518621012428-ef8be443fbf1?w=1200&q=90', 
+      url: 'https://www.emmiegray.de/media/image/54/33/61/EMMIEGRAY_LBH_CLASSIC_INFINITY_VIBRANTRED_600x600.png', 
       alt: 'Red Roses Bouquet',
       name: 'Red Roses Bouquet 🌹'
     },
     { 
       id: 3, 
-      url: 'https://images.unsplash.com/photo-1508610048659-a06b669e3321?w=1200&q=90', 
+      url: 'https://image.floranext.com/instances/elegantflowersfresno_com/catalog/product/i/m/img_4166_1.jpg?w=800&h=800&gen=1', 
       alt: 'White Elegant Flowers Bouquet',
       name: 'White Elegance Bouquet 🌸'
     },
     { 
       id: 4, 
-      url: 'https://images.unsplash.com/photo-1563241522-0a300ca42a92?w=1200&q=90', 
+      url: 'https://i.etsystatic.com/13796224/r/il/5181a5/5809329369/il_794xN.5809329369_msj2.jpg', 
       alt: 'Mixed Spring Flowers Bouquet',
       name: 'Mixed Spring Bouquet 🌺'
     },
     { 
       id: 5, 
-      url: 'https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?w=1200&q=90', 
+      url: 'https://i.etsystatic.com/13683532/r/il/b2ddd6/2330218658/il_794xN.2330218658_egfh.jpg', 
       alt: 'Sunflower Bouquet',
       name: 'Sunflower Bouquet 🌻'
     },
     { 
       id: 6, 
-      url: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&q=90', 
+      url: 'https://asset.bloomnation.com/c_pad,d_vendor:global:catalog:product:image.png,f_auto,fl_preserve_transparency,q_auto/v1703997497/vendor/9077/catalog/product/2/0/20231230083413_file_65907ec53fe05_65907fb11ecc7.jpeg', 
       alt: 'Lavender Bouquet',
       name: 'Lavender Dreams Bouquet 💜'
-    },
-    { 
-      id: 7, 
-      url: 'https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=1200&q=90', 
-      alt: 'Peony Bouquet',
-      name: 'Peony Paradise Bouquet 🌷'
-    },
-    { 
-      id: 8, 
-      url: 'https://images.unsplash.com/photo-1606041001883-2e5c52ed784b?w=1200&q=90', 
-      alt: 'Tulip Bouquet',
-      name: 'Tulip Garden Bouquet 🌷'
-    },
-    { 
-      id: 9, 
-      url: 'https://images.unsplash.com/photo-1606041001883-2e5c52ed784b?w=1200&q=90', 
-      alt: 'Rose and Baby Breath Bouquet',
-      name: 'Romantic Rose Bouquet 💕'
-    },
-    { 
-      id: 10, 
-      url: 'https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?w=1200&q=90', 
-      alt: 'Orchid Bouquet',
-      name: 'Exotic Orchid Bouquet 🌸'
     },
   ];
 

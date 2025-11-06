@@ -5,7 +5,6 @@ import { loadSlim } from 'tsparticles-slim';
 import { motion } from 'framer-motion';
 import { FaHeart, FaMusic, FaImage, FaGift, FaLeaf } from 'react-icons/fa';
 import FlowerGenerator from './components/FlowerGenerator';
-import BinaryMessage from './components/BinaryMessage';
 import TypedMessage from './components/TypedMessage';
 import PhotoGallery from './components/PhotoGallery';
 import MusicPlayer from './components/MusicPlayer';
@@ -170,8 +169,6 @@ function App() {
         </motion.div>
 
         <FlowerGenerator />
-
-        <BinaryMessage />
 
         <TypedMessage />
 
