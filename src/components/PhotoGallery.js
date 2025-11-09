@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import HelloKittyIcon from './HelloKittyIcon';
 import './PhotoGallery.css';
 
 const PhotoGallery = ({ onClose }) => {
@@ -47,7 +48,7 @@ const PhotoGallery = ({ onClose }) => {
         </button>
 
         <div className="gallery-header">
-          <h2>Our Beautiful Memories 💕 🧸</h2>
+          <h2>Our Beautiful Memories 💕 <HelloKittyIcon size={28} /></h2>
         </div>
 
         <div className="gallery-content">

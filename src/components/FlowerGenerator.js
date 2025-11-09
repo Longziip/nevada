@@ -21,7 +21,7 @@ const FlowerGenerator = () => {
 
       // Generate new flowers
       const flowerCount = 30;
-      const flowerTypes = ['🌹', '🌷', '🌺', '🌸', '💐', '🌻', '🌼', '🏵️', '🧸', '🎀', '🎌', '🏍️', '🌊', '✨'];
+      const flowerTypes = ['🌹', '🌷', '🌺', '🌸', '💐', '🌻', '🌼', '🏵️', '🎀', '🎌', '🏍️', '🌊', '✨'];
 
       for (let i = 0; i < flowerCount; i++) {
         const flower = document.createElement('div');

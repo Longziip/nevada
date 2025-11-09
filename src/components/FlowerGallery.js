@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import HelloKittyIcon from './HelloKittyIcon';
 import './FlowerGallery.css';
 
 const FlowerGallery = ({ onClose }) => {
@@ -74,7 +75,7 @@ const FlowerGallery = ({ onClose }) => {
         </button>
 
         <div className="flower-gallery-header">
-          <h2>💐 Beautiful Flower Bouquets For You 🧸</h2>
+          <h2>💐 Beautiful Flower Bouquets For You <HelloKittyIcon size={28} /></h2>
         </div>
 
         <div className="flower-gallery-content">

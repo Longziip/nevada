@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaHeart } from 'react-icons/fa';
+import HelloKittyIcon from './HelloKittyIcon';
 import './ReasonsILoveYou.css';
 
 const ReasonsILoveYou = () => {
@@ -8,16 +9,16 @@ const ReasonsILoveYou = () => {
   const [showAll, setShowAll] = useState(false);
 
   const reasons = [
-    'Your beautiful ocean eyes that I can get lost in 🌊',
-    'Your passion for anime and how excited you get talking about it 🎌',
-    'The way you light up when you talk about motorcycles 🏍️',
-    'Your strength and independence ✨',
-    'Your beautiful smile that makes my day 💖',
-    'How you make me feel loved and special 🧸',
-    'Your kindness and caring nature 💕',
-    'The way you support my dreams 🌟',
-    'Your sense of adventure and freedom 🚀',
-    'Just being you - because you\'re perfect exactly as you are 💎',
+    'Your beautiful ocean eyes that I can get lost in ',
+    'The way you light up when you talk about motorcycles ',
+    'Your passion for anime and how excited you get talking about it ',
+    'Your strength and independence ',
+    'Your beautiful smile that makes my day ',
+    'How you make me feel loved and special ',
+    'Your kindness and caring nature',
+    'The way you support my dreams ',
+    'Your sense of adventure and freedom ',
+    'Just being you - because you\'re perfect exactly as you are ',
   ];
 
   const nextReason = () => {
@@ -38,7 +39,7 @@ const ReasonsILoveYou = () => {
       <div className="reasons-box">
         <div className="reasons-header">
           <FaHeart className="reasons-heart" />
-          <h3>Reasons I Love You 🧸</h3>
+          <h3>Reasons Why I Love You <HelloKittyIcon size={24} /></h3>
           <FaHeart className="reasons-heart" />
         </div>
 

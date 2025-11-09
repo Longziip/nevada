@@ -3,8 +3,9 @@ import Confetti from 'react-confetti';
 import Particles from 'react-particles';
 import { loadSlim } from 'tsparticles-slim';
 import { motion } from 'framer-motion';
-import { FaHeart, FaMusic, FaImage, FaGift, FaLeaf } from 'react-icons/fa';
+import { FaHeart, FaMusic, FaImage, FaGift, FaLeaf, FaHands } from 'react-icons/fa';
 import FlowerGenerator from './components/FlowerGenerator';
+import HelloKittyIcon from './components/HelloKittyIcon';
 import TypedMessage from './components/TypedMessage';
 import PhotoGallery from './components/PhotoGallery';
 import MusicPlayer from './components/MusicPlayer';
@@ -12,6 +13,7 @@ import EnvelopeLetter from './components/EnvelopeLetter';
 import ReasonsILoveYou from './components/ReasonsILoveYou';
 import SpecialMessage from './components/SpecialMessage';
 import FlowerGallery from './components/FlowerGallery';
+import Doua from './components/Doua';
 import './App.css';
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
   const [showMusic, setShowMusic] = useState(false);
   const [showSpecial, setShowSpecial] = useState(false);
   const [showFlowerGallery, setShowFlowerGallery] = useState(false);
+  const [showDoua, setShowDoua] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -156,7 +159,7 @@ function App() {
             transition={{ repeat: Infinity, duration: 2 }}
             className="main-title"
           >
-            <FaHeart className="heart-icon" /> 🧸 Happy Birthday 🧸 <FaHeart className="heart-icon" />
+            <FaHeart className="heart-icon" /> <HelloKittyIcon size={32} /> Happy Birthday <HelloKittyIcon size={32} /> <FaHeart className="heart-icon" />
           </motion.h1>
           <motion.h2
             initial={{ opacity: 0 }}
@@ -209,12 +212,21 @@ function App() {
           >
             <FaLeaf /> Flower Bouquets
           </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => setShowDoua(!showDoua)}
+            className="feature-btn"
+          >
+            <FaHands /> Doua
+          </motion.button>
         </div>
 
         {showGallery && <PhotoGallery onClose={() => setShowGallery(false)} />}
         {showMusic && <MusicPlayer onClose={() => setShowMusic(false)} />}
         {showSpecial && <SpecialMessage onClose={() => setShowSpecial(false)} />}
         {showFlowerGallery && <FlowerGallery onClose={() => setShowFlowerGallery(false)} />}
+        {showDoua && <Doua onClose={() => setShowDoua(false)} />}
 
         <motion.div
           initial={{ opacity: 0 }}

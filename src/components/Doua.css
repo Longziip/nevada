@@ -1,0 +1,155 @@
+.doua-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.doua-modal {
+  background: white;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1001;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: rotate(90deg);
+}
+
+.doua-header {
+  padding: 30px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+  color: white;
+}
+
+.doua-header h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.2rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.doua-content {
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.doua-text-container {
+  background: linear-gradient(135deg, #fff5f5 0%, #ffeef0 100%);
+  border-radius: 15px;
+  padding: 25px;
+  border: 2px solid #ffb6c1;
+  text-align: center;
+}
+
+.doua-text {
+  font-family: 'Arial', 'Tahoma', sans-serif;
+  font-size: 1.4rem;
+  line-height: 2.2;
+  color: #333;
+  direction: rtl;
+  text-align: right;
+  font-weight: 500;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.doua-translation {
+  background: rgba(255, 182, 193, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  border-left: 4px solid #ff1493;
+}
+
+.doua-translation h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  color: #ff1493;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.translation-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.7;
+  margin: 0;
+  font-style: italic;
+}
+
+.doua-footer {
+  text-align: center;
+  padding: 15px;
+  background: linear-gradient(135deg, #fff5f5 0%, #ffeef0 100%);
+  border-radius: 12px;
+  border-top: 2px dashed #ffb6c1;
+}
+
+.doua-footer p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3rem;
+  color: #ff1493;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .doua-modal {
+    max-width: 90%;
+  }
+
+  .doua-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .doua-text {
+    font-size: 1.2rem;
+    line-height: 2;
+  }
+
+  .doua-content {
+    padding: 20px 15px;
+    gap: 20px;
+  }
+
+  .doua-text-container {
+    padding: 20px;
+  }
+}
+

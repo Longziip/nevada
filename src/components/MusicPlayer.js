@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaTimes } from 'react-icons/fa';
+import HelloKittyIcon from './HelloKittyIcon';
 import './MusicPlayer.css';
 
 const MusicPlayer = ({ onClose }) => {
@@ -31,7 +32,7 @@ const MusicPlayer = ({ onClose }) => {
         </button>
 
         <div className="music-header">
-          <h2>🎵 Birthday Music 🎵 🧸</h2>
+          <h2>🎵 Birthday Music 🎵 <HelloKittyIcon size={28} /></h2>
         </div>
 
         <div className="music-content">
