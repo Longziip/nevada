@@ -5,12 +5,10 @@ import './EnvelopeLetter.css';
 
 const EnvelopeLetter = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isFlipped, setIsFlipped] = useState(false);
 
   const handleEnvelopeClick = () => {
     if (!isOpen) {
       setIsOpen(true);
-      setTimeout(() => setIsFlipped(true), 300);
     }
   };
 

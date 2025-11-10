@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { FaTimes, FaHeart } from 'react-icons/fa';
 import HelloKittyIcon from './HelloKittyIcon';
 import './SpecialMessage.css';
