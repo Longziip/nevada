@@ -4,7 +4,7 @@ import { FaTimes } from 'react-icons/fa';
 import './Doua.css';
 
 const Doua = ({ onClose }) => {
-  const duaText = 'اللهم ان كنت تعلم ان لي الخير في هذه الفتاة فأكتبها لي و إن كنت تعلم لا خير لي فيها فإجعل لي الخير و اكتبها لي';
+  const duaText = 'اللهم ان كنت تعلم ان لي الخير في هذه الفتاة فأكتبها لي و إن كنت تعلم لا خير لي فيها فإجعل لي الخير فيها و اكتبها لي';
 
   return (
     <motion.div
