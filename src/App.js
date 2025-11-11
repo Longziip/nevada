@@ -171,6 +171,27 @@ function App() {
           </motion.h2>
         </motion.div>
 
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.7, duration: 0.8 }}
+          className="ascii-heart-container"
+        >
+          <pre className="ascii-heart">{`
+    ░░  ░░    
+  ░░░░░░░░░░  
+ ░░░░░░░░░░░░ 
+░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░
+ ░░░░░░░░░░░░ 
+  ░░░░░░░░░░  
+   ░░░░░░░░   
+    ░░░░░░    
+     ░░░░     
+      ░░      
+`}</pre>
+        </motion.div>
+
         <FlowerGenerator />
 
         <TypedMessage />
