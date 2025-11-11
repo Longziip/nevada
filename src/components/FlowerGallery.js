@@ -120,7 +120,7 @@ const FlowerGallery = ({ onClose }) => {
         </div>
 
         <div className="flower-message">
-          <p>💖 Each bouquet represents a special moment with you 💖</p>
+          <p>LOVE YOU</p>
         </div>
       </motion.div>
     </motion.div>

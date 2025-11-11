@@ -14,22 +14,23 @@ const EnvelopeLetter = () => {
 
   const message = `My Dearest Kamilia,
 
+First of all, I wanted to celebrate your birthday together. bringing you flowers, hugging you, and even singing happy birthday for you. But since you’re far away now, I can only send you my love through these words, hoping they reach you with all the warmth I feel inside. Even with the distance between us, my heart is right there with you.
 
 On this special day, I want you to know how incredibly amazing you are! You bring so much joy, love, and happiness into my life every single day.
 
-Your ocean eyes are like the deepest sea, and I could get lost in them forever. You're strong, beautiful, and inspiring. And when you ride your Kawasaki you are absolutely breathtaking - so free and full of life! 
+Your ocean eyes are like the deepest sea, and I could get lost in them forever. (Mnevarsi tvoy te glaza). your eyes, they have something magical, something that makes the whole world fade when I look into them. You're strong, beautiful, and inspiring. And when you ride your Kawasaki, you are absolutely breathtaking. so free and full of life inshallah!
 
-I want you to know that I wasn't against you when you decided to buy a bike. I wanted to support you with all my heart, but I was afraid - not because I didn't believe in you, but because you mean everything to me. The thought of losing you terrifies me because I can't imagine my life with anyone else. You are my world, my everything, and I love you more than words can express.
+I want you to know that I was never against you when you decided to buy a bike. I wanted to support you with all my heart, but I was afraid. not because I didn’t believe in you, but because you mean everything to me. The thought of losing you terrifies me because I can’t imagine my life with anyone else. You are my world, my everything, and I love you more than words can express.
 
-You are not just my girlfriend, but my best friend, my partner, and my greatest blessing. Your passion for anime and the freedom you feel on the road - it's all part of what makes you so uniquely amazing.
+You are not just my girlfriend, but my best friend, my partner, and my greatest blessing. Your passion for anime, the freedom you feel on the road, your beautiful mind, and everything about you. it's all part of what makes you so uniquely amazing.
 
-I hope this birthday brings you all the happiness you deserve and more. May all your dreams come true, and may you always know how loved and cherished you are.
+I hope this birthday brings you all the happiness you deserve and more. May all your dreams come true inshallah, and may you always know how loved and cherished you are.
 
-Happy Birthday, my beautiful Kamilia! 
+Happy Birthday, my beautiful Kamilia!
 
 With all my love,
-Zipry 
-ya tebya lyublyu
+Zipry
+ya tebya lyublyu ❤️
 `;
 
   return (

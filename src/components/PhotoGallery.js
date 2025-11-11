@@ -18,6 +18,9 @@ const PhotoGallery = ({ onClose }) => {
     { id: 7, url: 'https://media.discordapp.net/attachments/1418460823151443988/1424110728033599660/image.png?ex=690cf1f8&is=690ba078&hm=48950cb1c2ca5b61814d36e736200957999b2a1b1480622b735081ff40e9f86d&=&format=webp&quality=lossless&width=1155&height=606', alt: 'Beautiful moment 7' },
     { id: 8, url: 'https://media.discordapp.net/attachments/1418460823151443988/1423345964390809631/image.png?ex=690d757a&is=690c23fa&hm=181efd7c814dc9ae5d822971a25b3e68ea4279b12fc0aea09eaa2b014347fc7b&=&format=webp&quality=lossless', alt: 'Beautiful moment 8' },
     { id: 9, url: 'https://media.discordapp.net/attachments/1418460823151443988/1422392593534291998/image.png?ex=690d4955&is=690bf7d5&hm=811eaa3c55ef61b07bc33d16408101cac0217e73e2d226776bb205a2e23e8c55&=&format=webp&quality=lossless&width=869&height=606', alt: 'Beautiful moment 9' },
+    { id: 10, url: 'https://media.discordapp.net/attachments/1437514277668917382/1437514341527326930/IMG_2812.jpg?ex=6913850e&is=6912338e&hm=d773523e70e256422009d4f2ea58e99cbbd6b84cd12b6f5d97b16cd209c3b8b4&=&format=webp&width=616&height=1095', alt: 'Beautiful moment 9' },
+    { id: 11, url: 'https://media.discordapp.net/attachments/1437514277668917382/1437514341967597640/IMG_2811.jpg?ex=6913850e&is=6912338e&hm=6ba6968c71e68adf3cad0e97f3d73d430fae201102e3f13287cabbf6e11ce097&=&format=webp&width=616&height=1095', alt: 'Beautiful moment 9' },
+    { id: 12, url: 'https://media.discordapp.net/attachments/1437514277668917382/1437514342890209424/IMG_2810.jpg?ex=6913850f&is=6912338f&hm=a2d9494d2952862f94e3d7dfc3f30850525487f58bcf0aff1ec93b315290a319&=&format=webp&width=616&height=1095', alt: 'Beautiful moment 9' },
   ];
 
   const nextPhoto = () => {
